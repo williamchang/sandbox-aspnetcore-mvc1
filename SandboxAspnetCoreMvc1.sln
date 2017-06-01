@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.6
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SandboxAspnetCoreMvc1.Web", "src\SandboxAspnetCoreMvc1.Web\SandboxAspnetCoreMvc1.Web.csproj", "{52AF824B-14EB-4BEA-ACD9-5CC5608AB751}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SandboxAspnetCoreMvc1.Files", "SandboxAspnetCoreMvc1.Files", "{02906D81-44CA-4665-9E18-A8065EDD7D4E}"
+	ProjectSection(SolutionItems) = preProject
+		src\SandboxAspnetCoreMvc1.Files\create.sql = src\SandboxAspnetCoreMvc1.Files\create.sql
+		src\SandboxAspnetCoreMvc1.Files\create.sqlite.sql = src\SandboxAspnetCoreMvc1.Files\create.sqlite.sql
+		src\SandboxAspnetCoreMvc1.Files\editor.sql = src\SandboxAspnetCoreMvc1.Files\editor.sql
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{52AF824B-14EB-4BEA-ACD9-5CC5608AB751}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52AF824B-14EB-4BEA-ACD9-5CC5608AB751}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52AF824B-14EB-4BEA-ACD9-5CC5608AB751}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52AF824B-14EB-4BEA-ACD9-5CC5608AB751}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
