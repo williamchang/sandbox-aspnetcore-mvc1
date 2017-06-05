@@ -15,6 +15,10 @@
         - https://andrewlock.net/configuring-environment-specific-services-in-asp-net-core/
         - https://andrewlock.net/configuring-environment-specific-services-in-asp-net-core-part-2/
         .
+    - Dependency Injection Pass Parameters To Constructors:
+        - https://www.codefluff.com/dependency-injection-with-asp-net-core-mvc/
+        - https://stackoverflow.com/questions/34834295/asp-net-5-dependency-injection-inject-with-parameters
+        .
     - IOptions:
         - https://stackoverflow.com/questions/39752174/using-iconfigureoptions-to-configure-an-injected-dependency
         - http://henkmollema.github.io/advanced-options-configuration-in-asp.net-core/
@@ -72,8 +76,8 @@ public static class AppExtensions
             sqlConnectionString = sqlConnectionString.Replace("|DataDirectory|\\", String.Concat(System.IO.Path.Combine(configuration["ASPNETCORE_CONTENTROOT"], "App_Data"), System.IO.Path.DirectorySeparatorChar));
         }
 
-        services.TryAdd(new ServiceDescriptor(typeof(Data.Interfaces.ISystemRepository), x => new Data.SQLite.Repositories.SystemRepository(sqlConnectionString), ServiceLifetime.Scoped));
-        services.TryAdd(new ServiceDescriptor(typeof(Data.Interfaces.IUserRepository), x => new Data.SQLite.Repositories.UserRepository(sqlConnectionString), ServiceLifetime.Scoped));
+        services.AddScoped<Data.Interfaces.ISystemRepository>(x => new Data.SQLite.Repositories.SystemRepository(sqlConnectionString));
+        services.AddScoped<Data.Interfaces.IUserRepository>(x => new Data.SQLite.Repositories.UserRepository(sqlConnectionString));
 
         return services;
     }
