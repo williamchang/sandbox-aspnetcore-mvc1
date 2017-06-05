@@ -7,27 +7,12 @@
     0.1
 @date
     - Created: 2015-08-20
-    - Modified: 2015-08-26
+    - Modified: 2017-06-05
     .
 @note
     References:
     - General:
-        - http://stackoverflow.com/questions/882916/calling-filterattributes-onactionexecuting-before-basecontrollers-onactionexecu
-        .
-    - Page.Request (HttpRequest URL):
-        - HttpContext.Current.Request.RawUrl, HttpContext.Request.Url.PathAndQuery
-        - http://timstall.dotnetdevelopersjournal.com/understanding_httprequest_urls.htm
-        .
-    - Params:
-        - http://www.switchonthecode.com/tutorials/csharp-snippet-tutorial-the-params-keyword
-        - http://www.myviewstate.net/blog/post/2009/05/21/Passing-Delegates-as-Parameters-in-C.aspx
-        .
-    - Flags:
-        - http://dotnet.org.za/kevint/pages/Flags.aspx
-        .
-    - Model:
-        - Domain Model (Data, DDD)
-        - Presentation Model (Web, MVC)
+        - Nothing.
         .
     .
 */
@@ -37,6 +22,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
 
 namespace SandboxAspnetCoreMvc1.Web.Controllers {
 
@@ -48,6 +34,8 @@ public abstract class BaseController : Controller
     public static readonly string ObjectTypeNamespace = "SandboxAspnetCoreMvc1.Web.Controllers";
     public static readonly string ObjectTypeFullName = String.Concat(ObjectTypeNamespace, ".", ObjectTypeName);
 
+    protected readonly IAppHead _appHead;
+
     /// <summary>Default constructor.</summary>
     public BaseController() : base()
     {
@@ -56,25 +44,31 @@ public abstract class BaseController : Controller
         System.Diagnostics.Debug.WriteLine(String.Format("{0} : Constructor Ended", ObjectTypeFullName));
     }
 
-    /// <summary>Default constructor.</summary>
-    public BaseController(Microsoft.Extensions.Options.IOptions<Web.ViewModels.ConfigurationAppSettings> settings) : base()
+    /// <summary>Argument constructor.</summary>
+    public BaseController(IAppHead appHead) : base()
     {
         System.Diagnostics.Debug.WriteLine(String.Format("{0} : Constructor Started", ObjectTypeFullName));
-        // Do something.
+        _appHead = appHead;
         System.Diagnostics.Debug.WriteLine(String.Format("{0} : Constructor Ended", ObjectTypeFullName));
     }
 
     /// <summary>Get database connection string.</summary>
-    /*[NonAction]
+    [NonAction]
     public string GetDatabaseConnectionString(string name = "Default")
     {
-        var dbConnectionStringSettings = System.Configuration.ConfigurationManager.ConnectionStrings[name];
-        if(dbConnectionStringSettings != null && !String.IsNullOrEmpty(dbConnectionStringSettings.ConnectionString)) {
-            return dbConnectionStringSettings.ConnectionString;
+        if(_appHead.GetSettings()?.Data?.ConnectionStrings != null && !String.IsNullOrEmpty(name)) {
+            return _appHead.GetSettings().Data.ConnectionStrings[name];
         } else {
-            throw new Exception("Missing connecting string in Web.config file.");
+            throw new Exception("Missing connecting string in appsettings.json file.");
         }
-    }*/
+    }
+
+    /// <summary>Get setting value. Eg Configuration["Logging:LogLevel:Default"]</summary>
+    [NonAction]
+    public string GetSetting(string settingName, string defaultValue)
+    {
+        return GetSafeValue(_appHead.GetConfiguration().GetValue<string>(settingName), defaultValue);
+    }
 
 #region Utilities
 
@@ -99,12 +93,6 @@ public abstract class BaseController : Controller
             return defaultValue;
         }
     }
-
-    /*[NonAction]
-    public static string GetSetting(string settingName, string defaultValue)
-    {
-        return GetSafeValue(System.Configuration.ConfigurationManager.AppSettings.Get(settingName), defaultValue);
-    }*/
 
 #endregion
 

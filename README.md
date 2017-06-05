@@ -1,4 +1,4 @@
-# Sandbox ASP.NET Core MVC 1
+# Sandbox ASP.NET Core MVC
 
 Contributions are welcome. Feel free to submit issues if you run into problems or you have suggestions on how to improve it!
 

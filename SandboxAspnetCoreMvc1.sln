@@ -12,6 +12,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SandboxAspnetCoreMvc1.Files
 		src\SandboxAspnetCoreMvc1.Files\editor.sql = src\SandboxAspnetCoreMvc1.Files\editor.sql
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SandboxAspnetCoreMvc1.Data.SQLite", "src\SandboxAspnetCoreMvc1.Data.SQLite\SandboxAspnetCoreMvc1.Data.SQLite.csproj", "{8E4D30CF-7AC1-4F17-9C6F-78753DA90D33}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SandboxAspnetCoreMvc1.Data", "src\SandboxAspnetCoreMvc1.Data\SandboxAspnetCoreMvc1.Data.csproj", "{CCBDFDC6-A565-45D2-9838-34CF75D7C37B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -22,6 +26,14 @@ Global
 		{52AF824B-14EB-4BEA-ACD9-5CC5608AB751}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{52AF824B-14EB-4BEA-ACD9-5CC5608AB751}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{52AF824B-14EB-4BEA-ACD9-5CC5608AB751}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E4D30CF-7AC1-4F17-9C6F-78753DA90D33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E4D30CF-7AC1-4F17-9C6F-78753DA90D33}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E4D30CF-7AC1-4F17-9C6F-78753DA90D33}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E4D30CF-7AC1-4F17-9C6F-78753DA90D33}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CCBDFDC6-A565-45D2-9838-34CF75D7C37B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CCBDFDC6-A565-45D2-9838-34CF75D7C37B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CCBDFDC6-A565-45D2-9838-34CF75D7C37B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CCBDFDC6-A565-45D2-9838-34CF75D7C37B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

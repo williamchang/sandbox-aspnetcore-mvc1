@@ -7,7 +7,12 @@ using Microsoft.AspNetCore.Mvc;
 namespace SandboxAspnetCoreMvc1.Web.Controllers {
 
 public class HomeController : BaseController
+{
+    /// <summary>Argument constructor.</summary>
+    public HomeController(IAppHead appHead) : base(appHead)
     {
+    }
+
     /// <summary>GET /Home</summary>
     public IActionResult Index()
     {
