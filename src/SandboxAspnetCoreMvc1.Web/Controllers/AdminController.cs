@@ -17,10 +17,10 @@ public class AdminController : BaseController
     /// <summary>Argument constructor.</summary>
     public AdminController(Data.Interfaces.ISystemRepository repoSystem, Data.Interfaces.IUserRepository repoUser)
     {
-        System.Diagnostics.Debug.WriteLine(String.Format("{0} : Constructor Started", ObjectTypeFullName));
+        System.Diagnostics.Debug.WriteLine("{0} : Constructor Started", ObjectTypeFullName, String.Empty);
         _repoSystem = repoSystem;
         _repoUser = repoUser;
-        System.Diagnostics.Debug.WriteLine(String.Format("{0} : Constructor Ended", ObjectTypeFullName));
+        System.Diagnostics.Debug.WriteLine("{0} : Constructor Ended", ObjectTypeFullName, String.Empty);
     }
 
     /// <summary>GET /Admin</summary>
