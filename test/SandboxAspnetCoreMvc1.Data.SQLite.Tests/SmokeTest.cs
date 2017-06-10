@@ -4,7 +4,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace SandboxAspnetCoreMvc1.Data.SQLite.Tests {
 
 [TestClass]
-public class ContextTest
+public class SmokeTest : TestBase
 {
     [TestMethod]
     public void Connection_works()
@@ -28,7 +28,7 @@ public class ContextTest
     }
 
     [TestMethod]
-    public void File_system_path_works()
+    public void File_system_path_to_Web_App_Data_folder()
     {
         // Arrange.
         string appCurrentFolderPath1;
@@ -76,17 +76,60 @@ public class ContextTest
     }
 
     [TestMethod]
-    public void Path_to_database()
+    public void Open_connection_by_TestConfig()
     {
-        throw new NotImplementedException();
+        // Arrange and act.
+        using(var connection = new Microsoft.Data.Sqlite.SqliteConnection(TestConfig.ConnectionString))
+        {
+            connection.Open();
+
+            // Assert.
+            Assert.IsTrue(System.IO.Path.IsPathRooted(connection.DataSource));
+            Assert.AreEqual(TestConfig.DataSource, System.IO.Path.GetFileName(connection.DataSource));
+        }
     }
 
     [TestMethod]
-    public void Connect_to_database()
+    public void Open_connection_by_file_system_path_to_DataSource()
     {
-        throw new NotImplementedException();
+        // Arrange.
+        string dataSource = "Test.sqlite3";
+        string currentProjectFolderPath;
+        string connectionString;
+
+        // Act.
+        currentProjectFolderPath = System.IO.Directory.GetParent(System.AppContext.BaseDirectory).Parent.Parent.FullName;
+        connectionString = String.Format("Data Source={0}", System.IO.Path.Combine(currentProjectFolderPath, dataSource));
+        using(var connection = new Microsoft.Data.Sqlite.SqliteConnection(connectionString))
+        {
+            connection.Open();
+
+            // Assert.
+            Assert.IsTrue(System.IO.Path.IsPathRooted(connection.DataSource));
+            Assert.AreEqual(dataSource, System.IO.Path.GetFileName(connection.DataSource));
+        }
     }
 
+    [TestMethod]
+    public void BeginTransaction_works()
+    {
+        // Arrange and act.
+        using(var connection = new Microsoft.Data.Sqlite.SqliteConnection("Data Source=:memory:"))
+        {
+            connection.Open();
+
+            using(var transaction = connection.BeginTransaction(System.Data.IsolationLevel.Serializable))
+            {
+                // Assert.
+                Assert.IsNotNull(transaction);
+                Assert.AreEqual(connection, transaction.Connection);
+                Assert.AreEqual(System.Data.IsolationLevel.Serializable, transaction.IsolationLevel);
+            }
+
+            // Assert.
+            Assert.AreEqual(System.Data.ConnectionState.Open, connection.State);
+        }
+    }
 }
 
 }

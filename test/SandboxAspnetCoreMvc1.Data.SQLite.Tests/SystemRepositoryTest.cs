@@ -5,7 +5,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace SandboxAspnetCoreMvc1.Data.SQLite.Tests {
 
 [TestClass]
-public class SystemRepositoryTest
+public class SystemRepositoryTest : TestBase
 {
     [TestMethod]
     public void CreateLog()
@@ -16,8 +16,8 @@ public class SystemRepositoryTest
             new Entities.SystemLog {Id = 102, DateCreated = DateTime.Now, Thread = String.Empty, Level = String.Empty, Logger = String.Empty, Message = String.Empty, Exception = String.Empty},
             new Entities.SystemLog {Id = 103, DateCreated = DateTime.Now, Thread = String.Empty, Level = String.Empty, Logger = String.Empty, Message = String.Empty, Exception = String.Empty}
         };
-        var repoSystem = new Repositories.SystemRepository("Test.sqlite3");
-        var returnLogs = new List<Entities.SystemLog>();
+        var repoSystem = new Repositories.SystemRepository(TestConfig.ConnectionString);
+        IList<Entities.SystemLog> returnLogs = new List<Entities.SystemLog>();
 
         // Act.
         foreach(var log in logs)
@@ -33,6 +33,20 @@ public class SystemRepositoryTest
         }
 
         throw new NotImplementedException();
+    }
+
+    [TestMethod]
+    public void GetLogs()
+    {
+        // Arrange.
+        var repoSystem = new Repositories.SystemRepository(TestConfig.ConnectionString);
+        IList<Entities.SystemLog> returnLogs = new List<Entities.SystemLog>();
+
+        // Act.
+        returnLogs = repoSystem.GetLogs();
+
+        // Assert.
+        Assert.IsTrue(returnLogs.Count > 0);
     }
 }
 
