@@ -18,6 +18,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SandboxAspnetCoreMvc1.Data"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SandboxAspnetCoreMvc1.Data.SQLite.Tests", "test\SandboxAspnetCoreMvc1.Data.SQLite.Tests\SandboxAspnetCoreMvc1.Data.SQLite.Tests.csproj", "{3BAB69A7-920F-47EF-A8DE-C043C814DA4E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SandboxAspnetCoreMvc1.Data.Rest", "src\SandboxAspnetCoreMvc1.Data.Rest\SandboxAspnetCoreMvc1.Data.Rest.csproj", "{CEFEA3CD-4A09-43E3-825E-6C8A70E79C9F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SandboxAspnetCoreMvc1.Data.Rest.Tests", "test\SandboxAspnetCoreMvc1.Data.Rest.Tests\SandboxAspnetCoreMvc1.Data.Rest.Tests.csproj", "{AD627909-28CF-4F80-A55A-79A8DE4FA99B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -40,6 +44,14 @@ Global
 		{3BAB69A7-920F-47EF-A8DE-C043C814DA4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3BAB69A7-920F-47EF-A8DE-C043C814DA4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3BAB69A7-920F-47EF-A8DE-C043C814DA4E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CEFEA3CD-4A09-43E3-825E-6C8A70E79C9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CEFEA3CD-4A09-43E3-825E-6C8A70E79C9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CEFEA3CD-4A09-43E3-825E-6C8A70E79C9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CEFEA3CD-4A09-43E3-825E-6C8A70E79C9F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD627909-28CF-4F80-A55A-79A8DE4FA99B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD627909-28CF-4F80-A55A-79A8DE4FA99B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD627909-28CF-4F80-A55A-79A8DE4FA99B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD627909-28CF-4F80-A55A-79A8DE4FA99B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

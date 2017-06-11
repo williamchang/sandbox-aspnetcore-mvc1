@@ -46,6 +46,7 @@ public class LogLevel
 public class Data
 {
     public ConnectionStrings ConnectionStrings {get;set;}
+    public string ContentWebServiceBaseUrl {get;set;}
 }
 
 public class ConnectionStrings

@@ -28,7 +28,7 @@ namespace SandboxAspnetCoreMvc1.Data.SQLite.Repositories {
 /// Dependencies:
 /// Data.Entities.SystemSetting
 /// </remarks>
-public class SystemRepository : BaseRepository, Data.Interfaces.ISystemRepository
+public class SystemRepository : Data.Interfaces.ISystemRepository
 {
     protected readonly string _sqlConnectionString;
 

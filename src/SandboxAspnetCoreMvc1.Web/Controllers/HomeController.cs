@@ -8,9 +8,12 @@ namespace SandboxAspnetCoreMvc1.Web.Controllers {
 
 public class HomeController : BaseController
 {
+    protected readonly Data.Interfaces.IContentRepository _repoContent;
+
     /// <summary>Argument constructor.</summary>
-    public HomeController(IAppHead appHead) : base(appHead)
+    public HomeController(IAppHead appHead, Data.Interfaces.IContentRepository repoContent) : base(appHead)
     {
+        _repoContent = repoContent;
     }
 
     /// <summary>GET /Home</summary>
@@ -25,6 +28,22 @@ public class HomeController : BaseController
         ViewData["Message"] = "Your application description page.";
 
         return View();
+    }
+
+    /// <summary>GET /Home/Blog</summary>
+    public IActionResult Blog()
+    {
+        var objs1 = _repoContent.GetPosts().Take(3).Select(x => new Data.Entities.ContentPost() {
+            Id = x.Id,
+            UserId = x.UserId,
+            Title = x.Title,
+            Body = x.Body
+        });
+        if(objs1 == null) {
+            return StatusCode(Microsoft.AspNetCore.Http.StatusCodes.Status404NotFound);
+        }
+        ViewBag.ViewMode = "list";
+        return View(objs1);
     }
 
     /// <summary>GET /Home/Contact</summary>

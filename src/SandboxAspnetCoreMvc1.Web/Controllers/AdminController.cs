@@ -8,19 +8,12 @@ namespace SandboxAspnetCoreMvc1.Web.Controllers {
 
 public class AdminController : BaseController
 {
-    new public static readonly string ObjectTypeName = "AdminController";
-    new public static readonly string ObjectTypeFullName = String.Concat(ObjectTypeNamespace, ".", ObjectTypeName);
-
     protected readonly Data.Interfaces.ISystemRepository _repoSystem;
-    protected readonly Data.Interfaces.IUserRepository _repoUser;
 
     /// <summary>Argument constructor.</summary>
-    public AdminController(Data.Interfaces.ISystemRepository repoSystem, Data.Interfaces.IUserRepository repoUser)
+    public AdminController(Data.Interfaces.ISystemRepository repoSystem)
     {
-        System.Diagnostics.Debug.WriteLine("{0} : Constructor Started", ObjectTypeFullName, String.Empty);
         _repoSystem = repoSystem;
-        _repoUser = repoUser;
-        System.Diagnostics.Debug.WriteLine("{0} : Constructor Ended", ObjectTypeFullName, String.Empty);
     }
 
     /// <summary>GET /Admin</summary>

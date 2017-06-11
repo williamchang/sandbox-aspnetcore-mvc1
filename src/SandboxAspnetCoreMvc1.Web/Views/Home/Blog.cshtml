@@ -1,0 +1,17 @@
+﻿@model IEnumerable<SandboxAspnetCoreMvc1.Data.Entities.ContentPost>
+
+@{
+	ViewBag.Title = "Blog";
+}
+
+@if(Model.Count() >= 1 && ViewBag.ViewMode == "list") {
+	<h2>Get a few dummy posts from consuming a REST Web Service on the server-side.</h2>
+	@foreach(var item in Model) {
+		<div class="row">
+			<h3>@item.Id : @item.Title</h3>
+			<p>@item.Body</p>
+		</div>
+	}
+} else {
+	<h2>Something is technically wrong.</h2>
+}

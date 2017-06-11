@@ -71,13 +71,15 @@ public static class AppExtensions
         }
 
         string sqlConnectionString = configuration["Data:ConnectionStrings:SQLite"];
-
         if(!String.IsNullOrEmpty(sqlConnectionString)) {
             sqlConnectionString = sqlConnectionString.Replace("|DataDirectory|\\", String.Concat(System.IO.Path.Combine(configuration["ASPNETCORE_CONTENTROOT"], "App_Data"), System.IO.Path.DirectorySeparatorChar));
+            services.AddScoped<Data.Interfaces.ISystemRepository>(x => new Data.SQLite.Repositories.SystemRepository(sqlConnectionString));
         }
 
-        services.AddScoped<Data.Interfaces.ISystemRepository>(x => new Data.SQLite.Repositories.SystemRepository(sqlConnectionString));
-        services.AddScoped<Data.Interfaces.IUserRepository>(x => new Data.SQLite.Repositories.UserRepository(sqlConnectionString));
+        string restContentWebServiceBaseUrl = configuration["Data:ContentWebServiceBaseUrl"];
+        if(!String.IsNullOrEmpty(restContentWebServiceBaseUrl)) {
+            services.AddScoped<Data.Interfaces.IContentRepository>(x => new Data.Rest.Repositories.ContentRepository(restContentWebServiceBaseUrl));
+        }
 
         return services;
     }
