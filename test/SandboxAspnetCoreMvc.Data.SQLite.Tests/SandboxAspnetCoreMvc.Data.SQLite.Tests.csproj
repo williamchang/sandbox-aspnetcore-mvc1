@@ -6,12 +6,12 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.0.0" />
-    <PackageReference Include="MSTest.TestAdapter" Version="1.1.11" />
-    <PackageReference Include="MSTest.TestFramework" Version="1.1.11" />
+    <PackageReference Include="MSTest.TestAdapter" Version="1.1.18" />
+    <PackageReference Include="MSTest.TestFramework" Version="1.1.18" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\SandboxAspnetCoreMvc1.Data.Rest\SandboxAspnetCoreMvc1.Data.Rest.csproj" />
+    <ProjectReference Include="..\..\src\SandboxAspnetCoreMvc.Data.SQLite\SandboxAspnetCoreMvc.Data.SQLite.csproj" />
   </ItemGroup>
 
   <ItemGroup>

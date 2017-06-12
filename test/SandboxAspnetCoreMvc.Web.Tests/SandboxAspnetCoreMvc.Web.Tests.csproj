@@ -13,7 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\SandboxAspnetCoreMvc1.Web\SandboxAspnetCoreMvc1.Web.csproj" />
+    <ProjectReference Include="..\..\src\SandboxAspnetCoreMvc.Web\SandboxAspnetCoreMvc.Web.csproj" />
   </ItemGroup>
 
   <ItemGroup>

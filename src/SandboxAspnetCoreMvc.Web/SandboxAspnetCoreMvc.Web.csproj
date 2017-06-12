@@ -16,8 +16,8 @@
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="1.0.1" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\SandboxAspnetCoreMvc1.Data.Rest\SandboxAspnetCoreMvc1.Data.Rest.csproj" />
-    <ProjectReference Include="..\SandboxAspnetCoreMvc1.Data.SQLite\SandboxAspnetCoreMvc1.Data.SQLite.csproj" />
+    <ProjectReference Include="..\SandboxAspnetCoreMvc.Data.Rest\SandboxAspnetCoreMvc.Data.Rest.csproj" />
+    <ProjectReference Include="..\SandboxAspnetCoreMvc.Data.SQLite\SandboxAspnetCoreMvc.Data.SQLite.csproj" />
   </ItemGroup>
 
 </Project>

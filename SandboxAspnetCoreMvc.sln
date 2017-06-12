@@ -3,26 +3,26 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26430.6
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SandboxAspnetCoreMvc1.Web", "src\SandboxAspnetCoreMvc1.Web\SandboxAspnetCoreMvc1.Web.csproj", "{52AF824B-14EB-4BEA-ACD9-5CC5608AB751}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SandboxAspnetCoreMvc.Web", "src\SandboxAspnetCoreMvc.Web\SandboxAspnetCoreMvc.Web.csproj", "{52AF824B-14EB-4BEA-ACD9-5CC5608AB751}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SandboxAspnetCoreMvc1.Files", "SandboxAspnetCoreMvc1.Files", "{02906D81-44CA-4665-9E18-A8065EDD7D4E}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SandboxAspnetCoreMvc.Files", "SandboxAspnetCoreMvc.Files", "{02906D81-44CA-4665-9E18-A8065EDD7D4E}"
 	ProjectSection(SolutionItems) = preProject
-		src\SandboxAspnetCoreMvc1.Files\create.sql = src\SandboxAspnetCoreMvc1.Files\create.sql
-		src\SandboxAspnetCoreMvc1.Files\create.sqlite.sql = src\SandboxAspnetCoreMvc1.Files\create.sqlite.sql
-		src\SandboxAspnetCoreMvc1.Files\editor.sql = src\SandboxAspnetCoreMvc1.Files\editor.sql
+		src\SandboxAspnetCoreMvc.Files\create.sql = src\SandboxAspnetCoreMvc.Files\create.sql
+		src\SandboxAspnetCoreMvc.Files\create.sqlite.sql = src\SandboxAspnetCoreMvc.Files\create.sqlite.sql
+		src\SandboxAspnetCoreMvc.Files\editor.sql = src\SandboxAspnetCoreMvc.Files\editor.sql
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SandboxAspnetCoreMvc1.Data.SQLite", "src\SandboxAspnetCoreMvc1.Data.SQLite\SandboxAspnetCoreMvc1.Data.SQLite.csproj", "{8E4D30CF-7AC1-4F17-9C6F-78753DA90D33}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SandboxAspnetCoreMvc.Data.SQLite", "src\SandboxAspnetCoreMvc.Data.SQLite\SandboxAspnetCoreMvc.Data.SQLite.csproj", "{8E4D30CF-7AC1-4F17-9C6F-78753DA90D33}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SandboxAspnetCoreMvc1.Data", "src\SandboxAspnetCoreMvc1.Data\SandboxAspnetCoreMvc1.Data.csproj", "{CCBDFDC6-A565-45D2-9838-34CF75D7C37B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SandboxAspnetCoreMvc.Data", "src\SandboxAspnetCoreMvc.Data\SandboxAspnetCoreMvc.Data.csproj", "{CCBDFDC6-A565-45D2-9838-34CF75D7C37B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SandboxAspnetCoreMvc1.Data.SQLite.Tests", "test\SandboxAspnetCoreMvc1.Data.SQLite.Tests\SandboxAspnetCoreMvc1.Data.SQLite.Tests.csproj", "{3BAB69A7-920F-47EF-A8DE-C043C814DA4E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SandboxAspnetCoreMvc.Data.SQLite.Tests", "test\SandboxAspnetCoreMvc.Data.SQLite.Tests\SandboxAspnetCoreMvc.Data.SQLite.Tests.csproj", "{3BAB69A7-920F-47EF-A8DE-C043C814DA4E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SandboxAspnetCoreMvc1.Data.Rest", "src\SandboxAspnetCoreMvc1.Data.Rest\SandboxAspnetCoreMvc1.Data.Rest.csproj", "{CEFEA3CD-4A09-43E3-825E-6C8A70E79C9F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SandboxAspnetCoreMvc.Data.Rest", "src\SandboxAspnetCoreMvc.Data.Rest\SandboxAspnetCoreMvc.Data.Rest.csproj", "{CEFEA3CD-4A09-43E3-825E-6C8A70E79C9F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SandboxAspnetCoreMvc1.Data.Rest.Tests", "test\SandboxAspnetCoreMvc1.Data.Rest.Tests\SandboxAspnetCoreMvc1.Data.Rest.Tests.csproj", "{AD627909-28CF-4F80-A55A-79A8DE4FA99B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SandboxAspnetCoreMvc.Data.Rest.Tests", "test\SandboxAspnetCoreMvc.Data.Rest.Tests\SandboxAspnetCoreMvc.Data.Rest.Tests.csproj", "{AD627909-28CF-4F80-A55A-79A8DE4FA99B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SandboxAspnetCoreMvc1.Web.Tests", "test\SandboxAspnetCoreMvc1.Web.Tests\SandboxAspnetCoreMvc1.Web.Tests.csproj", "{0ED98AB0-606D-46B4-A483-95EF6F794822}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SandboxAspnetCoreMvc.Web.Tests", "test\SandboxAspnetCoreMvc.Web.Tests\SandboxAspnetCoreMvc.Web.Tests.csproj", "{0ED98AB0-606D-46B4-A483-95EF6F794822}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
