@@ -9,13 +9,13 @@ public class TestBase
     [TestInitialize]
     public void TestInit()
     {
-        System.Diagnostics.Trace.WriteLine("TestBase.TestInit()");
+        System.Diagnostics.Debug.WriteLine("TestBase.TestInit()");
     }
 
     [TestCleanup]
     public void TestCleanup()
     {
-        System.Diagnostics.Trace.WriteLine("TestBase.TestCleanup()");
+        System.Diagnostics.Debug.WriteLine("TestBase.TestCleanup()");
     }
 }
 

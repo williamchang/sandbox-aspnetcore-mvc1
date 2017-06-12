@@ -22,6 +22,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SandboxAspnetCoreMvc1.Data.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SandboxAspnetCoreMvc1.Data.Rest.Tests", "test\SandboxAspnetCoreMvc1.Data.Rest.Tests\SandboxAspnetCoreMvc1.Data.Rest.Tests.csproj", "{AD627909-28CF-4F80-A55A-79A8DE4FA99B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SandboxAspnetCoreMvc1.Web.Tests", "test\SandboxAspnetCoreMvc1.Web.Tests\SandboxAspnetCoreMvc1.Web.Tests.csproj", "{0ED98AB0-606D-46B4-A483-95EF6F794822}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -52,6 +54,10 @@ Global
 		{AD627909-28CF-4F80-A55A-79A8DE4FA99B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AD627909-28CF-4F80-A55A-79A8DE4FA99B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AD627909-28CF-4F80-A55A-79A8DE4FA99B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0ED98AB0-606D-46B4-A483-95EF6F794822}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0ED98AB0-606D-46B4-A483-95EF6F794822}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0ED98AB0-606D-46B4-A483-95EF6F794822}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0ED98AB0-606D-46B4-A483-95EF6F794822}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

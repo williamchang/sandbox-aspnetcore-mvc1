@@ -12,26 +12,28 @@ namespace SandboxAspnetCoreMvc1.Web {
 
 public class Startup
 {
+    // Argument constructor. Web configuration to load settings.
     public Startup(IHostingEnvironment env)
     {
-        // Configuration settings.
-
         var builder = new ConfigurationBuilder()
             .SetBasePath(env.ContentRootPath)
             .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
             .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true)
+            .AddInMemoryCollection(new [] {
+                new KeyValuePair<string, string>("HostingEnvironment.ContentRootPath", env.ContentRootPath),
+                new KeyValuePair<string, string>("HostingEnvironment.WebRootPath", env.WebRootPath)
+            })
             .AddEnvironmentVariables();
         Configuration = builder.Build();
     }
 
     public IConfigurationRoot Configuration {get;}
 
+    // Dependency injection configuration.
     // This method gets called by the runtime. Use this method to add services to the container.
     // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
     public void ConfigureServices(IServiceCollection services)
     {
-        // Service dependency injection configuration.
-
         // Add services required for using IOptions<T> pattern.
         services.AddOptions();
 
@@ -43,11 +45,10 @@ public class Startup
         services.AddData(Configuration);
     }
 
+    // Middleware configuration.
     // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
     public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
     {
-        // Middleware configuration.
-
         loggerFactory.AddConsole(Configuration.GetSection("Logging"));
         loggerFactory.AddDebug();
 

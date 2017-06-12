@@ -7,7 +7,7 @@
     0.1
 @date
     - Created: 2017-06-04
-    - Modified: 2017-06-05
+    - Modified: 2017-06-12
     .
 @note
     References:
@@ -70,9 +70,11 @@ public static class AppExtensions
             throw new ArgumentNullException(nameof(services));
         }
 
+        string appDataFolderName = "App_Data";
+        string appProjectFolderPath = configuration["ASPNETCORE_CONTENTROOT"] ?? configuration["HostingEnvironment.ContentRootPath"];
         string sqlConnectionString = configuration["Data:ConnectionStrings:SQLite"];
-        if(!String.IsNullOrEmpty(sqlConnectionString)) {
-            sqlConnectionString = sqlConnectionString.Replace("|DataDirectory|\\", String.Concat(System.IO.Path.Combine(configuration["ASPNETCORE_CONTENTROOT"], "App_Data"), System.IO.Path.DirectorySeparatorChar));
+        if(!String.IsNullOrEmpty(appProjectFolderPath) && !String.IsNullOrEmpty(sqlConnectionString)) {
+            sqlConnectionString = sqlConnectionString.Replace("|DataDirectory|\\", String.Concat(System.IO.Path.Combine(appProjectFolderPath, appDataFolderName), System.IO.Path.DirectorySeparatorChar));
             services.AddScoped<Data.Interfaces.ISystemRepository>(x => new Data.SQLite.Repositories.SystemRepository(sqlConnectionString));
         }
 
