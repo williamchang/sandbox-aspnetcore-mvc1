@@ -21,7 +21,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace SandboxAspnetCoreMvc1.Data.SQLite.Repositories {
+namespace SandboxAspnetCoreMvc.Data.SQLite.Repositories {
 
 /// <summary>System repository.</summary>
 /// <remarks>

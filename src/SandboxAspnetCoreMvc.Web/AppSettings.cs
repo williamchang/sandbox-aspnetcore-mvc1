@@ -24,7 +24,7 @@ using System;
 using System.Collections.Generic;
 using System.Reflection;
 
-namespace SandboxAspnetCoreMvc1.Web.Configuration {
+namespace SandboxAspnetCoreMvc.Web.Configuration {
 
 public class AppSettings
 {

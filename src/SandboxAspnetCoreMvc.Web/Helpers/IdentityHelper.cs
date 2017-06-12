@@ -19,7 +19,7 @@
 
 using System;
 
-namespace SandboxAspnetCoreMvc1.Web.Helpers {
+namespace SandboxAspnetCoreMvc.Web.Helpers {
 
 public static class IdentityHelper
 {

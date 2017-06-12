@@ -21,7 +21,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
-namespace SandboxAspnetCoreMvc1.Data.Entities {
+namespace SandboxAspnetCoreMvc.Data.Entities {
 
 public class UserSetting
 {

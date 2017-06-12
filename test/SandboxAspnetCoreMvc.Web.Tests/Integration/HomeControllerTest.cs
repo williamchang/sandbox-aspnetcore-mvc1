@@ -2,7 +2,7 @@
 using System.Threading.Tasks;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace SandboxAspnetCoreMvc1.Web.Tests.Integration {
+namespace SandboxAspnetCoreMvc.Web.Tests.Integration {
 
 [TestClass]
 public class HomeControllerTest : TestIntegrationBase<Startup>

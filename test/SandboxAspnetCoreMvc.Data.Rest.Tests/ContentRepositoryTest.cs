@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace SandboxAspnetCoreMvc1.Data.Rest.Tests {
+namespace SandboxAspnetCoreMvc.Data.Rest.Tests {
 
 [TestClass]
 public class ContentRepositoryTest : TestBase

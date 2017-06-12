@@ -26,7 +26,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Reflection;
 
-namespace SandboxAspnetCoreMvc1.Web.Helpers {
+namespace SandboxAspnetCoreMvc.Web.Helpers {
 
 public static class EnumerationHelper
 {

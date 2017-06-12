@@ -21,7 +21,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace SandboxAspnetCoreMvc1.Data.Rest.Repositories {
+namespace SandboxAspnetCoreMvc.Data.Rest.Repositories {
 
 /// <summary>Base Repository.</summary>
 public class BaseRepository : Data.Interfaces.IBaseRepository

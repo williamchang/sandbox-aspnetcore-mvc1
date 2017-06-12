@@ -4,13 +4,13 @@ using System.Reflection;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace SandboxAspnetCoreMvc1.Web.Tests.Integration {
+namespace SandboxAspnetCoreMvc.Web.Tests.Integration {
 
 /// <summary>A base class test which hosts the target web project in an in-memory server.</summary>
 /// <typeparam name="TStartup">Target project's startup type.</typeparam>
 public class TestIntegrationBase<TStartup>
 {
-    public static readonly string SolutionFileName = "SandboxAspnetCoreMvc1.sln";
+    public static readonly string SolutionFileName = "SandboxAspnetCoreMvc.sln";
 
     protected readonly Microsoft.AspNetCore.TestHost.TestServer _server;
     protected readonly System.Net.Http.HttpClient _client;

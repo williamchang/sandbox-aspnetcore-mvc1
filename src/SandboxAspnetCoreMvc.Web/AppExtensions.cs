@@ -39,9 +39,9 @@ using System;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
-using SandboxAspnetCoreMvc1.Web.Configuration;
+using SandboxAspnetCoreMvc.Web.Configuration;
 
-namespace SandboxAspnetCoreMvc1.Web {
+namespace SandboxAspnetCoreMvc.Web {
 
 public static class AppExtensions
 {

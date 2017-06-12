@@ -21,7 +21,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace SandboxAspnetCoreMvc1.Data.Interfaces {
+namespace SandboxAspnetCoreMvc.Data.Interfaces {
 
 /// <summary>
 /// Extends the basic data repository interface with an interface that supports a number 

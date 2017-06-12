@@ -21,7 +21,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace SandboxAspnetCoreMvc1.Web.Helpers {
+namespace SandboxAspnetCoreMvc.Web.Helpers {
 
 public static class CollectionHelper
 {

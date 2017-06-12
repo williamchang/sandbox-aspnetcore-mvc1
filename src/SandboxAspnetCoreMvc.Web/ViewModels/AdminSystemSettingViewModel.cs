@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace SandboxAspnetCoreMvc1.Web.ViewModels {
+namespace SandboxAspnetCoreMvc.Web.ViewModels {
 
 public class AdminSystemSettingViewModel
 {

@@ -24,14 +24,14 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 
-namespace SandboxAspnetCoreMvc1.Web.Controllers {
+namespace SandboxAspnetCoreMvc.Web.Controllers {
 
 /// <summary>Base controller (abstract) for all controllers.</summary>
 public abstract class BaseController : Controller
 {
-    public static readonly string ObjectOwner = "SandboxAspnetCoreMvc1";
+    public static readonly string ObjectOwner = "SandboxAspnetCoreMvc";
     public static readonly string ObjectTypeName = "BaseController";
-    public static readonly string ObjectTypeNamespace = "SandboxAspnetCoreMvc1.Web.Controllers";
+    public static readonly string ObjectTypeNamespace = "SandboxAspnetCoreMvc.Web.Controllers";
     public static readonly string ObjectTypeFullName = String.Concat(ObjectTypeNamespace, ".", ObjectTypeName);
 
     protected readonly IAppHead _appHead;

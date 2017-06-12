@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SandboxAspnetCoreMvc1.Data.SQLite.Tests {
+namespace SandboxAspnetCoreMvc.Data.SQLite.Tests {
 
 public static class TestConfig
 {

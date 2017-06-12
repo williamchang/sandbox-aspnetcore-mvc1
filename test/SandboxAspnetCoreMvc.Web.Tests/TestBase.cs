@@ -2,7 +2,7 @@ using System;
 using System.Reflection;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace SandboxAspnetCoreMvc1.Web.Tests {
+namespace SandboxAspnetCoreMvc.Web.Tests {
 
 [TestClass]
 public class TestBase
@@ -17,7 +17,7 @@ public class TestBase
     public void File_system_path_to_Web_project()
     {
         // Arrange.
-        var solutionFileName = "SandboxAspnetCoreMvc1.sln";
+        var solutionFileName = "SandboxAspnetCoreMvc.sln";
         var projectParentFolderName = "src";
 
         // Act.

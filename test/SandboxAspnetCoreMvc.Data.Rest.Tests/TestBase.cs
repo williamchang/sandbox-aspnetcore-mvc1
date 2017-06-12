@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace SandboxAspnetCoreMvc1.Data.Rest.Tests {
+namespace SandboxAspnetCoreMvc.Data.Rest.Tests {
 
 [TestClass]
 public class TestBase

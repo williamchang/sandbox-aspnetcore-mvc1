@@ -5,7 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Hosting;
 
-namespace SandboxAspnetCoreMvc1.Web {
+namespace SandboxAspnetCoreMvc.Web {
 
 public class Program
 {

@@ -1,7 +1,7 @@
 using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace SandboxAspnetCoreMvc1.Data.SQLite.Tests {
+namespace SandboxAspnetCoreMvc.Data.SQLite.Tests {
 
 [TestClass]
 public class SmokeTest : TestBase

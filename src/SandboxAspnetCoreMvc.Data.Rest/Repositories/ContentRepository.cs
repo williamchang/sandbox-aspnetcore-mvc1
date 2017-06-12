@@ -21,7 +21,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace SandboxAspnetCoreMvc1.Data.Rest.Repositories {
+namespace SandboxAspnetCoreMvc.Data.Rest.Repositories {
 
 public class ContentRepository : BaseRepository, Interfaces.IContentRepository
 {

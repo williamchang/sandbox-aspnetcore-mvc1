@@ -21,7 +21,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace SandboxAspnetCoreMvc1.Data.Interfaces {
+namespace SandboxAspnetCoreMvc.Data.Interfaces {
 
 /// <summary>Content repository interface.</summary>
 /// <remarks>

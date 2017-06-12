@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SandboxAspnetCoreMvc1.Data.Rest.Tests {
+namespace SandboxAspnetCoreMvc.Data.Rest.Tests {
 
 public static class TestConfig
 {
