@@ -3,7 +3,25 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26430.6
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SandboxAspnetCoreWebApi.Service", "src\SandboxAspnetCoreWebApi.Service\SandboxAspnetCoreWebApi.Service.csproj", "{AF602F8A-2312-40BA-AA0A-94B8D3098707}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SandboxAspnetCoreWebApi.Service.Tests", "test\SandboxAspnetCoreWebApi.Service.Tests\SandboxAspnetCoreWebApi.Service.Tests.csproj", "{67446DB1-BEC6-42F4-9CDE-B968175025EB}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AF602F8A-2312-40BA-AA0A-94B8D3098707}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF602F8A-2312-40BA-AA0A-94B8D3098707}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF602F8A-2312-40BA-AA0A-94B8D3098707}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF602F8A-2312-40BA-AA0A-94B8D3098707}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67446DB1-BEC6-42F4-9CDE-B968175025EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67446DB1-BEC6-42F4-9CDE-B968175025EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67446DB1-BEC6-42F4-9CDE-B968175025EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67446DB1-BEC6-42F4-9CDE-B968175025EB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
