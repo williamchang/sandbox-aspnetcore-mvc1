@@ -4,6 +4,8 @@
 	ViewBag.Title = "Blog";
 }
 
+<div>Total Elapsed Time Measured : @ViewBag.StopwatchTime</div>
+
 @if(Model.Count() >= 1 && ViewBag.ViewMode == "list") {
 	<h2>Get a few dummy posts from consuming a REST Web Service on the server-side.</h2>
 	@foreach(var item in Model) {

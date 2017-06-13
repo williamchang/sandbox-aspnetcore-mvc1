@@ -33,6 +33,8 @@ public class HomeController : BaseController
     /// <summary>GET /Home/Blog</summary>
     public IActionResult Blog()
     {
+        var stopwatch = System.Diagnostics.Stopwatch.StartNew();
+
         var objs1 = _repoContent.GetPosts().Take(3).Select(x => new Data.Entities.ContentPost() {
             Id = x.Id,
             UserId = x.UserId,
@@ -43,6 +45,9 @@ public class HomeController : BaseController
             return StatusCode(Microsoft.AspNetCore.Http.StatusCodes.Status404NotFound);
         }
         ViewBag.ViewMode = "list";
+
+        ViewBag.StopwatchTime = stopwatch.Elapsed;
+
         return View(objs1);
     }
 
