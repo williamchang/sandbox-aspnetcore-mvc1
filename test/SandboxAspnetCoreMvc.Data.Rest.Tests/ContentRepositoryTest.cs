@@ -8,9 +8,37 @@ namespace SandboxAspnetCoreMvc.Data.Rest.Tests {
 public class ContentRepositoryTest : TestBase
 {
     [TestMethod]
-    public void GetPost()
+    public void GetComment()
+    {
+        // Arrange.
+        var repoContent = new Repositories.ContentRepository(TestConfig.WebServiceBaseUrl);
+        Entities.ContentComment returnComment = null;
+
+        // Act.
+        returnComment = repoContent.GetComment(1);
+
+        // Assert.
+        Assert.IsNotNull(returnComment);
+    }
+
+    [TestMethod]
+    public void GetComments()
     {
         throw new NotImplementedException();
+    }
+
+    [TestMethod]
+    public void GetPost()
+    {
+        // Arrange.
+        var repoContent = new Repositories.ContentRepository(TestConfig.WebServiceBaseUrl);
+        Entities.ContentPost returnPost = null;
+
+        // Act.
+        returnPost = repoContent.GetPost(1);
+
+        // Assert.
+        Assert.IsNotNull(returnPost);
     }
 
     [TestMethod]

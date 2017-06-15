@@ -7,7 +7,7 @@
     0.1
 @date
     - Created: 2017-06-11
-    - Modified: 2017-06-11
+    - Modified: 2017-06-14
     .
 @note
     References:
@@ -20,6 +20,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using SandboxAspnetCoreMvc.Data.Entities;
 
 namespace SandboxAspnetCoreMvc.Data.Rest.Repositories {
 
@@ -38,9 +39,35 @@ public class ContentRepository : BaseRepository, Interfaces.IContentRepository
         this._restWebServiceBaseUri = new Uri(restWebServiceBaseUrl);
     }
 
-    public Entities.ContentPost GetPost(int id)
+    /// <summary>Get content comment.</summary>
+    public ContentComment GetComment(int id)
+    {
+        System.Threading.Thread.Sleep(20000); // Sleep for 20 seconds.
+        return new ContentComment {
+            PostId = 1,
+            Id = 1,
+            Name = "TestFirstName0001 TestLastName0001",
+            Email = "name0001@test.com",
+            Body = "TestBody0001"
+        };
+    }
+
+    /// <summary>Get content comments.</summary>
+    public IList<Entities.ContentComment> GetComments()
     {
         throw new NotImplementedException();
+    }
+
+    /// <summary>Get content post.</summary>
+    public Entities.ContentPost GetPost(int id)
+    {
+        System.Threading.Thread.Sleep(10000); // Sleep for 10 seconds.
+        return new ContentPost {
+            UserId = 1,
+            Id = 1,
+            Title = "TestTitle0001",
+            Body = "TestBody0001"
+        };
     }
 
     /// <summary>Get content posts.</summary>
@@ -64,6 +91,7 @@ public class ContentRepository : BaseRepository, Interfaces.IContentRepository
         }
         return null;
     }
+
 }
 
 }

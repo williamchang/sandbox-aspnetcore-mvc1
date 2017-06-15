@@ -7,7 +7,7 @@
     0.1
 @date
     - Created: 2017-06-11
-    - Modified: 2017-06-11
+    - Modified: 2017-06-14
     .
 @note
     References:
@@ -30,10 +30,16 @@ namespace SandboxAspnetCoreMvc.Data.Interfaces {
 /// </remarks>
 public interface IContentRepository : IBaseRepository
 {
-    /// <summary>Get system log.</summary>
+    /// <summary>Get content comment.</summary>
+    Entities.ContentComment GetComment(int id);
+
+    /// <summary>Get content comments.</summary>
+    IList<Entities.ContentComment> GetComments();
+
+    /// <summary>Get content post.</summary>
     Entities.ContentPost GetPost(int id);
 
-    /// <summary>Get system logs.</summary>
+    /// <summary>Get content posts.</summary>
     IList<Entities.ContentPost> GetPosts();
 }
 

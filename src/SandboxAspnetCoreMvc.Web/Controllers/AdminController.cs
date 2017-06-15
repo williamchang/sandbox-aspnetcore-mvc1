@@ -16,20 +16,20 @@ public class AdminController : BaseController
         _repoSystem = repoSystem;
     }
 
-    /// <summary>GET /Admin</summary>
+    /// <summary>GET Admin</summary>
     public IActionResult Index()
     {
         return View();
     }
 
-    /// <summary>GET /Admin/CreateSystemLog</summary>
+    /// <summary>GET Admin/CreateSystemLog</summary>
     [HttpGet]
     public IActionResult CreateSystemLog()
     {
         return View(new Data.Entities.SystemLog());
     }
 
-    /// <summary>POST /Admin/CreateSystemLog</summary>
+    /// <summary>POST Admin/CreateSystemLog</summary>
     [HttpPost]
     public IActionResult CreateSystemLog(Data.Entities.SystemLog formInput)
     {
@@ -49,14 +49,14 @@ public class AdminController : BaseController
         return View();
     }
 
-    /// <summary>GET /Admin/CreateSystemSetting</summary>
+    /// <summary>GET Admin/CreateSystemSetting</summary>
     [HttpGet]
     public IActionResult CreateSystemSetting()
     {
         return View(new Data.Entities.SystemSetting());
     }
 
-    /// <summary>POST /Admin/CreateSystemSetting</summary>
+    /// <summary>POST Admin/CreateSystemSetting</summary>
     [HttpPost]
     public IActionResult CreateSystemSetting(Data.Entities.SystemSetting formInput)
     {
@@ -74,7 +74,7 @@ public class AdminController : BaseController
         return View();
     }
 
-    /// <summary>POST /Admin/DeleteSystemLog</summary>
+    /// <summary>POST Admin/DeleteSystemLog</summary>
     [HttpPost]
     public IActionResult DeleteSystemLog(int? id)
     {
@@ -86,7 +86,7 @@ public class AdminController : BaseController
         return RedirectToAction("ViewSystemLog");
     }
 
-    /// <summary>POST /Admin/DeleteSystemLogs</summary>
+    /// <summary>POST Admin/DeleteSystemLogs</summary>
     [HttpPost]
     public IActionResult DeleteSystemLogs()
     {
@@ -94,7 +94,7 @@ public class AdminController : BaseController
         return RedirectToAction("ViewSystemLog");
     }
 
-    /// <summary>POST /Admin/DeleteSystemSetting</summary>
+    /// <summary>POST Admin/DeleteSystemSetting</summary>
     [HttpPost]
     public IActionResult DeleteSystemSetting(Guid? id)
     {
@@ -106,7 +106,7 @@ public class AdminController : BaseController
         return RedirectToAction("ViewSystemSetting");
     }
 
-    /// <summary>GET /Admin/EditSystemLog</summary>
+    /// <summary>GET Admin/EditSystemLog</summary>
     [HttpGet]
     public IActionResult EditSystemLog(int? id)
     {
@@ -122,7 +122,7 @@ public class AdminController : BaseController
         }
     }
 
-    /// <summary>POST /Admin/EditSystemLog</summary>
+    /// <summary>POST Admin/EditSystemLog</summary>
     [HttpPost]
     public IActionResult EditSystemLog(Data.Entities.SystemLog formInput)
     {
@@ -141,7 +141,7 @@ public class AdminController : BaseController
         return View(formInput);
     }
 
-    /// <summary>GET /Admin/EditSystemSetting</summary>
+    /// <summary>GET Admin/EditSystemSetting</summary>
     [HttpGet]
     public IActionResult EditSystemSetting(Guid? id)
     {
@@ -157,7 +157,7 @@ public class AdminController : BaseController
         }
     }
 
-    /// <summary>POST /Admin/EditSystemSetting</summary>
+    /// <summary>POST Admin/EditSystemSetting</summary>
     [HttpPost]
     public IActionResult EditSystemSetting(Data.Entities.SystemSetting formInput)
     {
@@ -175,7 +175,7 @@ public class AdminController : BaseController
         return View(formInput);
     }
 
-    /// <summary>GET /Admin/ViewSystemLog</summary>
+    /// <summary>GET Admin/ViewSystemLog</summary>
     [HttpGet]
     public IActionResult ViewSystemLog(int? id)
     {
@@ -213,7 +213,7 @@ public class AdminController : BaseController
         }
     }
 
-    /// <summary>GET /Admin/ViewSystemSetting</summary>
+    /// <summary>GET Admin/ViewSystemSetting</summary>
     [HttpGet]
     public IActionResult ViewSystemSetting(Guid? id)
     {

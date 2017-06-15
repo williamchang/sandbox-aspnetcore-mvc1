@@ -16,13 +16,13 @@ public class HomeController : BaseController
         _repoContent = repoContent;
     }
 
-    /// <summary>GET /Home</summary>
+    /// <summary>GET Home</summary>
     public IActionResult Index()
     {
         return View();
     }
 
-    /// <summary>GET /Home/About</summary>
+    /// <summary>GET Home/About</summary>
     public IActionResult About()
     {
         ViewData["Message"] = "Your application description page.";
@@ -30,9 +30,10 @@ public class HomeController : BaseController
         return View();
     }
 
-    /// <summary>GET /Home/Blog</summary>
+    /// <summary>GET Home/Blog</summary>
     public IActionResult Blog()
     {
+        // Start stopwatch to measure elapsed time.
         var stopwatch = System.Diagnostics.Stopwatch.StartNew();
 
         var objs1 = _repoContent.GetPosts().Take(3).Select(x => new Data.Entities.ContentPost() {
@@ -46,6 +47,7 @@ public class HomeController : BaseController
         }
         ViewBag.ViewMode = "list";
 
+        // Get and set the total elapsed time measured.
         ViewBag.StopwatchTime = stopwatch.Elapsed;
 
         return View(objs1);
@@ -59,20 +61,22 @@ public class HomeController : BaseController
         return View();
     }
 
-    /// <summary>GET /Home/Error</summary>
+    /// <summary>GET Home/Error</summary>
     public IActionResult Error()
     {
         return View();
     }
 
-    /// <summary>GET /Home/Sandbox</summary>
-    public IActionResult Sandbox([FromQuery]string echo, [FromQuery]string message)
+    /// <summary>GET Home/Sandbox0001</summary>
+    public IActionResult Sandbox0001([FromQuery]string echo, [FromQuery]string message)
     {
+        // Start stopwatch to measure elapsed time.
+        var stopwatch = System.Diagnostics.Stopwatch.StartNew();
+
         System.Text.StringBuilder sbDebug = new System.Text.StringBuilder();
 
         // References
         // http://www.hanselman.com/blog/ASPNETParamsCollectionVsQueryStringFormsVsRequestindexAndDoubleDecoding.aspx
-
         sbDebug.AppendFormat("\n<div>\n");
         sbDebug.AppendFormat("Request QueryString Echo : {0}", echo ?? "null");
         sbDebug.AppendFormat("\n<br />\n");
@@ -81,10 +85,44 @@ public class HomeController : BaseController
 
         ViewBag.DebugInformation = sbDebug.ToString();
 
+        // Get and set the total elapsed time measured.
+        ViewBag.StopwatchTime = stopwatch.Elapsed;
+
         return View();
     }
 
-    /// <summary>GET /Home/Raw</summary>
+    /// <summary>GET Home/Sandbox0002</summary>
+    public async Task<IActionResult> Sandbox0002([FromQuery]string echo, [FromQuery]string message)
+    {
+        // Start stopwatch to measure elapsed time.
+        var stopwatch = System.Diagnostics.Stopwatch.StartNew();
+
+        // Use the presentation layer to be responsible of asynchronous calling to synchronous operations.
+        var comment = await Task.Run(() => _repoContent.GetComment(1));
+
+        System.Text.StringBuilder sbDebug = new System.Text.StringBuilder();
+
+        sbDebug.AppendFormat("\n<div>\n");
+        sbDebug.AppendFormat("Comment.PostId : {0}", comment.PostId);
+        sbDebug.AppendFormat("\n<br />\n");
+        sbDebug.AppendFormat("Comment.Id : {0}", comment.Id);
+        sbDebug.AppendFormat("\n<br />\n");
+        sbDebug.AppendFormat("Comment.Name : {0}", comment.Name);
+        sbDebug.AppendFormat("\n<br />\n");
+        sbDebug.AppendFormat("Comment.Email : {0}", comment.Email);
+        sbDebug.AppendFormat("\n<br />\n");
+        sbDebug.AppendFormat("Comment.Body : {0}", comment.Body);
+        sbDebug.AppendFormat("\n</div>\n");
+
+        ViewBag.DebugInformation = sbDebug.ToString();
+
+        // Get and set the total elapsed time measured.
+        ViewBag.StopwatchTime = stopwatch.Elapsed;
+
+        return View();
+    }
+
+    /// <summary>GET Home/Raw</summary>
     public String Raw()
     {
         return "Raw";
